@@ -1,0 +1,37 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Table Request</h4>
+                      <!-- <p class="card-category"> Here is a subtitle for this table</p> -->
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                <th>User Id</th>
+                                <th>Name</th>
+                                <th>Email Address</th>
+                                <th>Request Workspace</th>
+                                <th>Approved Workspace</th>
+                                <th>Declined Workspace</th>
+                                <th>Booked Workspace</th>
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor="let w of workspaces">
+                                      
+                                      <td><img [src]="w.workspace_image" style="height:40px;widht:40px;"></td>
+                                      <td><input type="checkbox" (change)="toggleWorkspaceVerify(w)" [checked]="w.isVerify"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+</div>
